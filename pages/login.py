@@ -29,3 +29,4 @@ class Login:
         # Click the login button
         login_button = self.driver.find_element(By.XPATH, "//input[@value='Login']")
         login_button.click()
+        time.sleep(3)
