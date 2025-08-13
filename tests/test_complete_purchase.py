@@ -1,8 +1,6 @@
-import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from pages.product_page import ProductPage
+from pages.view_cart import ViewCart
+from pages.checkout import Checkout
 
 """ ....... Complete purchase flow starting from product selection ....... """
 def test_complete_purchase(driver):
@@ -14,12 +12,23 @@ def test_complete_purchase(driver):
     product_page.select_product()
     # Add the product to cart
     product_page.add_to_cart()
-    # Wait for the product added toaster
-    cart_msg = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.ID, "toast-container"))
-    )
-    # Verify product added or not
-    assert cart_msg.is_displayed(),"Product not added"
-    print(cart_msg.text)
 
     """ ....... View the cart page ....... """
+    cart_page=ViewCart(driver)
+    # View the cart page
+    cart_page.view_cart()
+
+    """ ...... Proceed to checkout page ....... """
+    checkout_page=Checkout(driver)
+    # Go to checkout page
+    checkout_page.proceed_to_checkout()
+
+    """ ...... Proceed to billing page and confirm the order ....... """
+    # Go to billing page and fill the details
+    checkout_page.billing_page()
+    # Select payment method
+    checkout_page.payment_selection()
+    # Place the order
+    checkout_page.order_placed()
+     # Order confirmation
+    checkout_page.order_confirmation()

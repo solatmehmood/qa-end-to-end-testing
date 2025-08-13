@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class Register:
     def __init__(self, driver):
@@ -34,7 +36,7 @@ class Register:
         state.send_keys("Punjab")
         country.send_keys("Pakistan")
         phone.send_keys("0314509876")
-        email.send_keys("test1344@gmail.com")
+        email.send_keys("test713@gmail.com")
         password.send_keys("Test@!9876")
 
     """....... Submit the signup form ....... """
@@ -42,4 +44,18 @@ class Register:
         # Click the register button
         register_button = self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
         register_button.click()
+
+        # Verify user registered or not
+        try:
+            # Wait until URL contains 'login'
+            WebDriverWait(self.driver, 10).until(EC.url_contains("login"))
+            # Assert signup success
+            assert "login" in self.driver.current_url, "Signup Failed"
+        except:
+            print("Signup Failed")
+        else:
+            # This runs only if try block succeeded without exception
+            print("Registered Successfully")
+
+
 

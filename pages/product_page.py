@@ -14,7 +14,7 @@ class ProductPage:
         self.driver.get("https://practicesoftwaretesting.com/")
         time.sleep(2)
         # Click on the product
-        self.driver.find_element(By.XPATH, '//img[@alt="Combination Pliers"]').click()
+        self.driver.find_element(By.XPATH, '//img[@alt="Bolt Cutters"]').click()
         time.sleep(5)  # Static wait for page load
 
     """....... Add the selected product to the cart....... """
@@ -25,3 +25,9 @@ class ProductPage:
             EC.element_to_be_clickable((By.ID, "btn-add-to-cart"))
         )
         cart_button.click()
+        cart_msg = WebDriverWait(self.driver, 20).until(
+            EC.presence_of_element_located((By.ID, "toast-container"))
+        )
+        # Verify product added or not
+        assert cart_msg.is_displayed(), "Product not added"
+        time.sleep(5)
