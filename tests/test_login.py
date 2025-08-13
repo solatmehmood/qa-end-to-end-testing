@@ -3,6 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.login import Login
 
+"""....... Login with valid credentials ....... """
 def test_login_with_valid_credentials(driver):
     # Create Login page object
     login = Login(driver)
@@ -18,6 +19,7 @@ def test_login_with_valid_credentials(driver):
     assert "account" in driver.current_url, "Login Failed"
     print(f"Login Success: {driver.current_url}")
 
+"""....... Login with invalid credentials ....... """
 def test_login_with_invalid_credentials(driver):
     # Create Login page object
     login=Login(driver)

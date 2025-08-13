@@ -7,6 +7,7 @@ class Login:
     def __init__(self, driver):
         self.driver = driver
 
+    """....... Navigate to homepage and open the login page ....... """
     def open_loginPage(self):
         # Launch the website
         self.driver.get("https://practicesoftwaretesting.com/")
@@ -17,6 +18,7 @@ class Login:
         sign_in_link.click()
         time.sleep(3)
 
+    """....... Fill the login form ....... """
     def fill_loginForm(self, email, password):
         # Locate email and password input fields
         email_input = self.driver.find_element(By.ID, "email")
@@ -25,6 +27,7 @@ class Login:
         email_input.send_keys(email)
         password_input.send_keys(password)
 
+    """....... Click the login button ....... """
     def click_login(self):
         # Click the login button
         login_button = self.driver.find_element(By.XPATH, "//input[@value='Login']")

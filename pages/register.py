@@ -4,10 +4,12 @@ class Register:
     def __init__(self, driver):
         self.driver = driver
 
+    """....... Open the Register page ....... """
     def open_signup_page(self):
         # Open the signup page
         self.driver.get("https://practicesoftwaretesting.com/auth/register")
 
+    """....... Fill the Register form ....... """
     def fill_signupForm(self):
         # Get the form elements
         firstName = self.driver.find_element(By.ID, "first_name")
@@ -35,6 +37,7 @@ class Register:
         email.send_keys("test1344@gmail.com")
         password.send_keys("Test@!9876")
 
+    """....... Submit the signup form ....... """
     def submit_form(self):
         # Click the register button
         register_button = self.driver.find_element(By.CSS_SELECTOR, "button[type='submit']")
