@@ -1,5 +1,7 @@
 # Ecommerce Automation Testing Framework
 
+---
+
 ## 1. Overview  
 This repository contains an **end-to-end automation testing framework** developed for an eCommerce web application. The framework is implemented using **Python**, **Selenium WebDriver**, and **Pytest**, following the **Page Object Model (POM)** design pattern to ensure maintainability, scalability, and reusability.  
 
@@ -9,7 +11,8 @@ The solution automates essential user journeys, including:
 - Shopping cart management  
 - Checkout process  
 
-The framework supports **HTML reporting** for detailed test results and is fully integrated with **Jenkins** for Continuous Integration and Continuous Delivery (CI/CD) pipelines.
+The framework supports **HTML reporting** for detailed test results and is fully integrated 
+with **Jenkins** for Continuous Integration and Continuous Delivery (CI/CD) pipelines.
 
 ---
 
@@ -61,8 +64,16 @@ Ecommerce/
 
 ---
 
+## 5. Running Tests & Generating Reports
+
+- Run all tests:  python -m pytest 
+- Run wth HTML report: python -m pytest --html=reports/test_report.html --self-contained-html  
+- Run specific test: pytest tests/test_login.py 
+- View report: Open reports/test_report.html in your browser
+
+---
+
 ## 5. Author  
 
 **Solat Mehmood**  
-QA Automation Engineer  
-
+QA Automation Engineer
