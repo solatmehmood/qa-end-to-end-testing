@@ -12,8 +12,8 @@ class ProductPage:
     def select_product(self):
         # Open the website
         self.driver.get("https://practicesoftwaretesting.com/")
-        time.sleep(2)  # Static wait (can be replaced with WebDriverWait)
-        # Click on the product image (Combination Pliers)
+        time.sleep(2)
+        # Click on the product
         self.driver.find_element(By.XPATH, '//img[@alt="Combination Pliers"]').click()
         time.sleep(5)  # Static wait for page load
 
