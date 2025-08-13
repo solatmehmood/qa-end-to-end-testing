@@ -36,7 +36,7 @@ class Register:
         state.send_keys("Punjab")
         country.send_keys("Pakistan")
         phone.send_keys("0314509876")
-        email.send_keys("test713@gmail.com")
+        email.send_keys("test7138@gmail.com")
         password.send_keys("Test@!9876")
 
     """....... Submit the signup form ....... """

@@ -1,24 +1,27 @@
+import pytest
 from pages.login import Login
 
 """....... Login with valid credentials ....... """
+@pytest.mark.order(2)
 def test_login_with_valid_credentials(driver):
     # Create Login page object
     login = Login(driver)
     # Open login page
     login.open_loginPage()
     # Fill login form
-    login.fill_loginForm("test1344@gmail.com", "Test@!9876")
+    login.fill_loginForm("test7138@gmail.com", "Test@!9876")
     # Click login button
     login.click_login()
 
 """....... Login with invalid credentials ....... """
+@pytest.mark.order(3)
 def test_login_with_invalid_credentials(driver):
     # Create Login page object
     login=Login(driver)
     # Open login page
     login.open_loginPage()
     # Fill login form with invalid credentials
-    login.fill_loginForm("test1344@gmail.com","Test@!98")
+    login.fill_loginForm("test13434@gmail.com","Test@!98")
     # Click login button
     login.click_login()
 

@@ -1,8 +1,10 @@
+import pytest
 from pages.product_page import ProductPage
 from pages.view_cart import ViewCart
 from pages.checkout import Checkout
 
 """ ....... Complete purchase flow starting from product selection ....... """
+@pytest.mark.order(4)
 def test_complete_purchase(driver):
     # Create ProductPage object
     product_page = ProductPage(driver)

@@ -23,7 +23,7 @@ class Checkout:
             password = self.driver.find_element(By.ID, "password")
 
             # Enter email and password
-            email.send_keys("test1344@gmail.com")
+            email.send_keys("test7138@gmail.com")
             password.send_keys("Test@!9876")
 
             # Click the login button
