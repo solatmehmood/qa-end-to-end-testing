@@ -26,6 +26,7 @@ Ecommerce/
 │   ├─ register.py            # Registration page actions
 │   ├─ product_page.py        # Product selection and details
 │   ├─ view_cart.py           # Cart management actions
+│   ├─ payment.py             # Payment actions
 │   └─ checkout.py            # Checkout process actions
 │
 ├─ tests/                     # Pytest test cases

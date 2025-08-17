@@ -1,6 +1,7 @@
 import pytest
 from pages.register import Register
 
+""" ....... Register a new user ....... """
 @pytest.mark.order(1)
 def test_signup(driver):
     # Create Register page object

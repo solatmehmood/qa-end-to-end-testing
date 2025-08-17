@@ -23,7 +23,7 @@ class Checkout:
             password = self.driver.find_element(By.ID, "password")
 
             # Enter email and password
-            email.send_keys("test7138@gmail.com")
+            email.send_keys("test1237@gmail.com")
             password.send_keys("Test@!9876")
 
             # Click the login button
@@ -72,13 +72,6 @@ class Checkout:
         )
         proceed_btn.click()
         time.sleep(3)
-
-    """....... Select the payment method ....... """
-    def payment_selection(self):
-        select_method=self.driver.find_element(By.XPATH,"//select[@id='payment-method']")
-        dropdown=Select(select_method)
-        # Select cash on delivery
-        dropdown.select_by_visible_text("Cash on Delivery")
 
     """....... Placed the order ....... """
     def order_placed(self):

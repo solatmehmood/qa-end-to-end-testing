@@ -9,7 +9,7 @@ def test_login_with_valid_credentials(driver):
     # Open login page
     login.open_loginPage()
     # Fill login form
-    login.fill_loginForm("test7138@gmail.com", "Test@!9876")
+    login.fill_loginForm("test1237@gmail.com", "Test@!9876")
     # Click login button
     login.click_login()
 
