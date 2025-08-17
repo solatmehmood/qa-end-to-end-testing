@@ -1,3 +1,5 @@
+import uuid
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -12,7 +14,7 @@ class Register:
         self.driver.get("https://practicesoftwaretesting.com/auth/register")
 
     """....... Fill the Register form ....... """
-    def fill_signupForm(self):
+    def fill_signupForm(self,email,password):
         # Get the form elements
         firstName = self.driver.find_element(By.ID, "first_name")
         lastName = self.driver.find_element(By.ID, "last_name")
@@ -23,9 +25,8 @@ class Register:
         state = self.driver.find_element(By.ID, "state")
         country = self.driver.find_element(By.ID, "country")
         phone = self.driver.find_element(By.ID, "phone")
-        email = self.driver.find_element(By.ID, "email")
-        password = self.driver.find_element(By.ID, "password")
-
+        email_field = self.driver.find_element(By.ID, "email")
+        password_field = self.driver.find_element(By.ID, "password")
         # Fill the form elements
         firstName.send_keys("test")
         lastName.send_keys("user")
@@ -36,8 +37,8 @@ class Register:
         state.send_keys("Punjab")
         country.send_keys("Pakistan")
         phone.send_keys("0314509876")
-        email.send_keys("test1237@gmail.com")
-        password.send_keys("Test@!9876")
+        email_field.send_keys(email)
+        password_field.send_keys(password)
 
     """....... Submit the signup form ....... """
     def submit_form(self):

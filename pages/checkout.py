@@ -4,27 +4,30 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 
+from tests.conftest import unique_email
+
+
 class Checkout:
     def __init__(self,driver):
         self.driver=driver
 
     """....... Proceed to checkout page ....... """
-    def proceed_to_checkout(self):
+    def proceed_to_checkout(self,email,password):
         proceed_toCheckout_button = self.driver.find_element(By.XPATH, "//button[text()='Proceed to checkout']")
         assert proceed_toCheckout_button.is_displayed(),"Cart page is not opened"
         proceed_toCheckout_button.click()
 
         # Wait for the element to visible
-        email=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.ID,"email")))
+        email_field=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.ID,"email")))
 
         # Check if email field is displayed (means user is not logged in)
-        if email.is_displayed():
+        if email_field.is_displayed():
             # Locate the password input field
-            password = self.driver.find_element(By.ID, "password")
+            password_field = self.driver.find_element(By.ID, "password")
 
             # Enter email and password
-            email.send_keys("test1237@gmail.com")
-            password.send_keys("Test@!9876")
+            email_field.send_keys(email)
+            password_field.send_keys(password)
 
             # Click the login button
             login_button = self.driver.find_element(By.XPATH, "//input[@value='Login']")

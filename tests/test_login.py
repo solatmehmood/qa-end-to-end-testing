@@ -3,13 +3,13 @@ from pages.login import Login
 
 """....... Login with valid credentials ....... """
 @pytest.mark.order(2)
-def test_login_with_valid_credentials(driver):
+def test_login_with_valid_credentials(driver,unique_email):
     # Create Login page object
     login = Login(driver)
     # Open login page
     login.open_loginPage()
     # Fill login form
-    login.fill_loginForm("test1237@gmail.com", "Test@!9876")
+    login.fill_loginForm(unique_email, "Test@!987")
     # Click login button
     login.click_login()
 

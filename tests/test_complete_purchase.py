@@ -3,11 +3,12 @@ from pages.product_page import ProductPage
 from pages.view_cart import ViewCart
 from pages.checkout import Checkout
 from pages.payment import PaymentMethod
+from tests.conftest import unique_email
 
 """ ....... Complete purchase with Cash on Delivery ....... """
 
 @pytest.mark.order(4)
-def test_purchase_with_COD(driver):
+def test_purchase_with_COD(driver,unique_email):
     # Create ProductPage object
     product_page = ProductPage(driver)
 
@@ -25,7 +26,7 @@ def test_purchase_with_COD(driver):
     """ ...... Proceed to checkout page ....... """
     checkout_page=Checkout(driver)
     # Go to checkout page
-    checkout_page.proceed_to_checkout()
+    checkout_page.proceed_to_checkout(unique_email,"Test@!987")
 
     """ ...... Proceed to billing page and confirm the order ....... """
     # Go to billing page and fill the details
@@ -41,7 +42,7 @@ def test_purchase_with_COD(driver):
 
 """ ....... Complete purchase with Bank Transfer ....... """
 @pytest.mark.order(5)
-def test_purchase_with_bank_transfer(driver):
+def test_purchase_with_bank_transfer(driver,unique_email):
     # Create ProductPage object
     product_page = ProductPage(driver)
 
@@ -59,7 +60,7 @@ def test_purchase_with_bank_transfer(driver):
     """ ...... Proceed to checkout page ....... """
     checkout_page=Checkout(driver)
     # Go to checkout page
-    checkout_page.proceed_to_checkout()
+    checkout_page.proceed_to_checkout(unique_email,"Test@!987")
 
     """ ...... Proceed to billing page and confirm the order ....... """
     # Go to billing page and fill the details
@@ -76,7 +77,7 @@ def test_purchase_with_bank_transfer(driver):
 """ ....... Complete purchase with Credit Card ....... """
 
 @pytest.mark.order(6)
-def test_purchase_with_credit_card(driver):
+def test_purchase_with_credit_card(driver,unique_email):
     # Create ProductPage object
     product_page = ProductPage(driver)
 
@@ -94,7 +95,7 @@ def test_purchase_with_credit_card(driver):
     """ ...... Proceed to checkout page ....... """
     checkout_page=Checkout(driver)
     # Go to checkout page
-    checkout_page.proceed_to_checkout()
+    checkout_page.proceed_to_checkout(unique_email,"Test@!987")
 
     """ ...... Proceed to billing page and confirm the order ....... """
     # Go to billing page and fill the details
