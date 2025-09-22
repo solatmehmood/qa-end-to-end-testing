@@ -1,9 +1,9 @@
 import pytest
-from pages.product_page import ProductPage
-from pages.view_cart import ViewCart
-from pages.checkout import Checkout
-from pages.payment import PaymentMethod
-from tests.conftest import unique_email
+from Automation.ToolShop.pages.product_page import ProductPage
+from Automation.ToolShop.pages.view_cart import ViewCart
+from Automation.ToolShop.pages.checkout import Checkout
+from Automation.ToolShop.pages.payment import PaymentMethod
+from Automation.ToolShop.tests.conftest import unique_email
 
 """ ....... Complete purchase with Cash on Delivery ....... """
 

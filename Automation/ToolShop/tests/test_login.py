@@ -1,5 +1,5 @@
 import pytest
-from pages.login import Login
+from Automation.ToolShop.pages.login import Login
 
 """....... Login with valid credentials ....... """
 @pytest.mark.order(2)

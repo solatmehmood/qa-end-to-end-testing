@@ -1,5 +1,5 @@
 import pytest
-from pages.register import Register
+from Automation.ToolShop.pages.register import Register
 
 """ ....... Register a new user ....... """
 @pytest.mark.order(1)
