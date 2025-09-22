@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e292d290-75c9-4627-898d-1088d85c55cd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QA Projects Portfolio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/checkout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/payment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/payment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/product_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/product_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/register.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/view_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/pages/view_cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/reports/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/test_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/reports/test_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_complete_purchase.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/tests/test_complete_purchase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation/ToolShop/tests/test_register.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Automation/Para Bank/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +44,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\solat.mahmood\PythonProject\QA Projects Portfolio" />
       <recent name="C:\Users\solat.mahmood\PythonProject\QA Projects Portfolio\Automation\ToolShop" />
       <recent name="C:\Users\solat.mahmood\PythonProject\QA Projects Portfolio\Automation" />
     </key>
